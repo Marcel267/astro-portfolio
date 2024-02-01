@@ -1,4 +1,3 @@
 ## Todos:
-
--   Remove @TODOs
+-   Remove @TODOs and comments
 -   use own domain? "portfolio.mmotano.de"?

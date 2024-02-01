@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
-<BaseLayout title="Resume" sideBarActiveItemID="cv">
+<BaseLayout title="Lebenslauf" sideBarActiveItemID="cv">
 	<!-- @TODO: Remove? -->
 	<!-- <div class="mb-5">
 		<div class="text-3xl w-full font-bold">Profile</div>
@@ -71,19 +71,64 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 		</TimeLineElement>
 	</div>
 
-	<!-- @TODO: Remove? -->
-	<!-- <div class="mb-5">
-		<div class="text-3xl w-full font-bold">Certifications</div>
+	<div class="mb-5">
+		<div class="text-3xl w-full font-bold">Zertifikate</div>
 	</div>
 
-	<ul class="list-disc mx-6 mb-10 grid gap-2">
-		<li>
-			<a href="#" target="_blank"> Certification Name (with link)</a>
-		</li>
-		<li>
-			<a href="#" target="_blank"> Certification Name (with link)</a>
-		</li>
-	</ul> -->
+	<div class="grid grid-cols-2">
+		<div>
+			<div class="text-xl font-semibold mb-2">Sololearn</div>
+			<ul class="list-disc mx-6 mb-10 grid gap-2">
+				<li>
+					<a
+						class="link link-primary"
+						href="https://www.sololearn.com/certificates/CC-UVHNUPZZ"
+						target="_blank">JS-Intermediate</a
+					>
+				</li>
+				<li>
+					<a
+						class="link link-primary"
+						href="https://www.sololearn.com/certificates/CT-SHKDB0UJ"
+						target="_blank">PHP</a
+					>
+				</li>
+				<li>
+					<a
+						class="link link-primary"
+						href="https://www.sololearn.com/certificates/CT-R9XXIPOC"
+						target="_blank">SQL</a
+					>
+				</li>
+				<li>
+					<a
+						class="link link-primary"
+						href="https://www.sololearn.com/certificates/CT-JNNCBZ32"
+						target="_blank">Responsive</a
+					>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<div class="text-xl font-semibold mb-2">Udemy</div>
+			<ul class="list-disc mx-6 mb-10 grid gap-2">
+				<li>
+					<a
+						class="link link-primary"
+						href="https://www.udemy.com/certificate/UC-e6adc224-0b84-4f27-b66e-7c50e5dfa8ce/"
+						target="_blank">Web-Entwickler Masterclass</a
+					>
+				</li>
+				<li>
+					<a
+						class="link link-primary"
+						href="https://www.udemy.com/certificate/UC-8a8ed0f5-173a-4592-b38d-039a32a6648e/"
+						target="_blank">Symfony - Grundkurs</a
+					>
+				</li>
+			</ul>
+		</div>
+	</div>
 
 	<div class="mb-5">
 		<div class="text-3xl w-full font-bold">Technologien</div>
