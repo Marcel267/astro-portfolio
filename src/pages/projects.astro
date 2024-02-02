@@ -5,47 +5,65 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
 <BaseLayout title="Projekte" sideBarActiveItemID="projects">
 	<div>
-		<div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+		<div class="text-3xl w-full font-bold mb-5">Meine letzten Projekte</div>
 	</div>
 
 	<HorizontalCard
-		title="Demo Project 1"
+		title="Moroseum"
 		img="/post_img.webp"
-		desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-		url="#"
+		desc="Schulprojekt: Webanwendung mit Datenbankanbindung und Fokus auf UI und UX. Beinhaltet Autorisierung und Authentifizierung von Kunden mittels NextAuth.js und ein Ticketbestellsystem."
+		url="https://github.com/Marcel267/museum"
 		badge="NEW"
+		tags={["Next.js", "Prisma", "MySQL"]}
 	/>
 	<div class="divider my-0"></div>
 	<HorizontalCard
-		title="Demo Project 2"
+		title="Next Todo"
 		img="/post_img.webp"
-		desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-		url="#"
+		desc="Einfache Next.js Todo-App mit Datenbankanbindung."
+		url="https://github.com/Marcel267/next_todo"
+		tags={["Next.js", "Prisma", "MySQL"]}
+	/>
+	<div class="divider my-0"></div>
+	<HorizontalCard
+		title="Symfony Marketing-Website"
+		img="/post_img.webp"
+		desc="Multi-Page Marketing-Website, gebaut mit Symfony und Flowbite."
+		url="https://github.com/Marcel267/symfony_marketing"
+		tags={["Symfony", "TailwindCSS", "Flowbite"]}
+	/>
+	<div class="divider my-0"></div>
+	<HorizontalCard
+		title="Freunde-Kartei"
+		img="/post_img.webp"
+		desc="Schulprojekt: CRUD-Webandwendung, um Freunde und ihre Adressen zu verwalten."
+		url="https://github.com/Marcel267/kartei"
+		tags={["PHP", "TailwindCSS", "Flowbite"]}
 	/>
 
-	<div>
-		<div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
-	</div>
+	<!-- <div>
+        <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
+    </div>
 
-	<HorizontalCard
-		title="Demo Project 3"
-		img="/post_img.webp"
-		desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-		url="#"
-		badge="FOSS"
-	/>
-	<div class="divider my-0"></div>
-	<HorizontalCard
-		title="Demo Project 4"
-		img="/post_img.webp"
-		desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-		url="#"
-	/>
-	<div class="divider my-0"></div>
-	<HorizontalCard
-		title="Demo Project 5"
-		img="/post_img.webp"
-		desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-		url="#"
-	/>
+    <HorizontalCard
+        title="Demo Project 3"
+        img="/post_img.webp"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        url="#"
+        badge="FOSS"
+    />
+    <div class="divider my-0"></div>
+    <HorizontalCard
+        title="Demo Project 4"
+        img="/post_img.webp"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        url="#"
+    />
+    <div class="divider my-0"></div>
+    <HorizontalCard
+        title="Demo Project 5"
+        img="/post_img.webp"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        url="#"
+    /> -->
 </BaseLayout>
