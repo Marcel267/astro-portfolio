@@ -5,6 +5,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://mmotano.de',
-  base: '/astro-portfolio',
+  // base: '/astro-portfolio',
   integrations: [sitemap(), tailwind()]
 });
