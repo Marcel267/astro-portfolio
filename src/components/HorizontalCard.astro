@@ -1,5 +1,14 @@
 ---
-const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+const {
+	title,
+	img,
+	desc,
+	url,
+	badge,
+	tags,
+	target = "_blank",
+	id,
+} = Astro.props;
 import { Image } from "astro:assets";
 // const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
@@ -8,12 +17,13 @@ import { Image } from "astro:assets";
 	class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
 >
 	<!-- @TODO: Remove? -->
-	<a href={url} target={target}>
+	<a class="cursor-pointer" onclick=`my_modal_${id}.showModal()`>
+		<!-- <button onclick=`my_modal_${id}.showModal()`> -->
 		<div class="hero-content flex-col md:flex-row">
 			{
 				img && (
 					<Image
-						src={`/astro-portfolio${img}`}
+						src={`/astro-portfolio/moroseum/1.png`}
 						width={750}
 						height={422}
 						format="webp"
@@ -34,7 +44,7 @@ import { Image } from "astro:assets";
 					}
 				</h1>
 				<p class="py-1 text-1xl">{desc}</p>
-				<div class="card-actions justify-end">
+				<div class="card-actions justify-end pt-1">
 					{
 						tags &&
 							tags.map((tag: string) => (
@@ -45,4 +55,104 @@ import { Image } from "astro:assets";
 			</div>
 		</div>
 	</a>
+	<!-- </button> -->
 </div>
+
+<!-- Open the modal using ID.showModal() method -->
+
+<dialog id=`my_modal_${id}` class="modal">
+	<!-- max-w-[calc(64rem-2rem)] -->
+	<div class="modal-box p-0 md:pt-6 md:px-6 w-11/12 max-w">
+		<div class="carousel w-full">
+			<div
+				id="slide1"
+				class="carousel-item relative w-full flex justify-center"
+			>
+				<Image
+					src={`/astro-portfolio/moroseum/1.png`}
+					width={950}
+					height={622}
+					format="webp"
+					alt={title}
+					class="max-w-full rounded-t-lg md:rounded-lg"
+				/>
+				<div
+					class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+				>
+					<a href="#slide4" class="btn btn-circle">❮</a>
+					<a href="#slide2" class="btn btn-circle">❯</a>
+				</div>
+			</div>
+			<div
+				id="slide2"
+				class="carousel-item relative w-full flex justify-center"
+			>
+				<Image
+					src={`/astro-portfolio/moroseum/2.png`}
+					width={950}
+					height={622}
+					format="webp"
+					alt={title}
+					class="max-w-full rounded-lg"
+				/>
+				<div
+					class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+				>
+					<a href="#slide1" class="btn btn-circle">❮</a>
+					<a href="#slide3" class="btn btn-circle">❯</a>
+				</div>
+			</div>
+			<div
+				id="slide3"
+				class="carousel-item relative w-full flex justify-center"
+			>
+				<Image
+					src={`/astro-portfolio/moroseum/3.png`}
+					width={950}
+					height={622}
+					format="webp"
+					alt={title}
+					class="max-w-full rounded-lg"
+				/>
+				<div
+					class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+				>
+					<a href="#slide2" class="btn btn-circle">❮</a>
+					<a href="#slide4" class="btn btn-circle">❯</a>
+				</div>
+			</div>
+			<div
+				id="slide4"
+				class="carousel-item relative w-full flex justify-center"
+			>
+				<Image
+					src={`/astro-portfolio/moroseum/4.png`}
+					width={950}
+					height={622}
+					format="webp"
+					alt={title}
+					class="max-w-full rounded-lg"
+				/>
+				<div
+					class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+				>
+					<a href="#slide3" class="btn btn-circle">❮</a>
+					<a href="#slide1" class="btn btn-circle">❯</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal-action p-6 pt-0 md:pt-6">
+			<form method="dialog">
+				<!-- if there is a button in form, it will close the modal -->
+				<button class="btn text-lg">Schließen</button>
+				<a
+					href="https://github.com/Marcel267/museum"
+					target="_blank"
+					class="btn btn-outline ml-5 text-lg"
+				>
+					Quellcode
+				</a>
+			</form>
+		</div>
+	</div>
+</dialog>
