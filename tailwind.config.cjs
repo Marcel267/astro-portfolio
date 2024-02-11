@@ -25,11 +25,14 @@ module.exports = {
 		// 	{
 		// 	  mytheme: {
 		// 		...require("daisyui/src/theming/themes")["dracula"],
-		// 		primary: "#7480ff",
-		// 		secondary: "#ff52d9",
+		// 		// primary: "#7480ff",
+		// 		// secondary: "#ff52d9",
+		// 		primary: "#bd93f9",
+		// 		secondary: "#ff79c6",
 		// 	  },
 		// 	},
 		//   ],
 		//   darkTheme: 'mytheme',
+		  
 	}
 }
