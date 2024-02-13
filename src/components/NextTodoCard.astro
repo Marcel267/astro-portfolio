@@ -1,0 +1,163 @@
+---
+const { title, img, desc, badge, tags, target = "_blank", id } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div
+	class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
+>
+	<!-- @TODO: Remove? -->
+	<a class="cursor-pointer" onclick=`my_modal_${id}.showModal()`>
+		<div class="hero-content flex-col md:flex-row">
+			{
+				img && (
+					<Image
+						src={img}
+						width={750}
+						height={422}
+						format="png"
+						alt={title}
+						class="max-w-full md:max-w-[13rem] rounded-lg"
+					/>
+				)
+			}
+			<div class="grow w-full">
+				<h1 class="text-xl font-bold">
+					{title}
+					{
+						badge && (
+							<div class="badge badge-secondary mx-2">
+								{badge}
+							</div>
+						)
+					}
+				</h1>
+				<p class="py-1 text-1xl">{desc}</p>
+				<div class="card-actions justify-end pt-1">
+					{
+						tags &&
+							tags.map((tag: string) => (
+								<span class="badge badge-outline">{tag}</span>
+							))
+					}
+				</div>
+			</div>
+		</div>
+	</a>
+</div>
+
+<!-- Open the modal using ID.showModal() method -->
+
+<dialog id=`my_modal_${id}` class="modal">
+	<div class="modal-box p-0 md:pt-6 md:px-6 w-11/12 max-w-[calc(64rem-2rem)]">
+		<div class="carousel w-full">
+			<div
+				id="next_todo_slide1"
+				class="carousel-item relative w-full flex justify-center"
+			>
+				<Image
+					src={`/next_todo/1.png`}
+					width={950}
+					height={622}
+					format="png"
+					alt={title}
+					class="max-w-full rounded-t-lg md:rounded-lg"
+				/>
+				<div
+					class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+				>
+					<a href="#next_todo_slide5" class="btn btn-circle">❮</a>
+					<a href="#next_todo_slide2" class="btn btn-circle">❯</a>
+				</div>
+			</div>
+			<div
+				id="next_todo_slide2"
+				class="carousel-item relative w-full flex justify-center"
+			>
+				<Image
+					src={`/next_todo/2.png`}
+					width={950}
+					height={622}
+					format="png"
+					alt={title}
+					class="max-w-full rounded-lg"
+				/>
+				<div
+					class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+				>
+					<a href="#next_todo_slide1" class="btn btn-circle">❮</a>
+					<a href="#next_todo_slide3" class="btn btn-circle">❯</a>
+				</div>
+			</div>
+			<div
+				id="next_todo_slide3"
+				class="carousel-item relative w-full flex justify-center"
+			>
+				<Image
+					src={`/next_todo/3.png`}
+					width={950}
+					height={622}
+					format="png"
+					alt={title}
+					class="max-w-full rounded-lg"
+				/>
+				<div
+					class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+				>
+					<a href="#next_todo_slide2" class="btn btn-circle">❮</a>
+					<a href="#next_todo_slide4" class="btn btn-circle">❯</a>
+				</div>
+			</div>
+			<div
+				id="next_todo_slide4"
+				class="carousel-item relative w-full flex justify-center"
+			>
+				<Image
+					src={`/next_todo/4.png`}
+					width={950}
+					height={622}
+					format="png"
+					alt={title}
+					class="max-w-full rounded-lg"
+				/>
+				<div
+					class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+				>
+					<a href="#next_todo_slide3" class="btn btn-circle">❮</a>
+					<a href="#next_todo_slide1" class="btn btn-circle">❯</a>
+				</div>
+			</div>
+			<div
+				id="next_todo_slide5"
+				class="carousel-item relative w-full flex justify-center"
+			>
+				<Image
+					src={`/next_todo/5.png`}
+					width={950}
+					height={622}
+					format="png"
+					alt={title}
+					class="max-w-full rounded-lg"
+				/>
+				<div
+					class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+				>
+					<a href="#next_todo_slide4" class="btn btn-circle">❮</a>
+					<a href="#next_todo_slide1" class="btn btn-circle">❯</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal-action p-6 pt-0">
+			<form method="dialog">
+				<button class="btn text-lg">Schließen</button>
+				<a
+					href="https://github.com/Marcel267/museum"
+					target="_blank"
+					class="btn btn-outline ml-5 text-lg"
+				>
+					Quellcode
+				</a>
+			</form>
+		</div>
+	</div>
+</dialog>

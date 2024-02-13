@@ -1,6 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
+// import HorizontalCard from "../components/MoroseumCard.astro";
+import MoroseumCard from "../components/MoroseumCard.astro";
+import NextTodoCard from "../components/NextTodoCard.astro";
+import SymfonyCard from "../components/SymfonyCard.astro";
+import FriendCard from "../components/FriendCard.astro";
 ---
 
 <BaseLayout title="Projekte" sideBarActiveItemID="projects">
@@ -8,7 +12,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 		<div class="text-3xl w-full font-bold mb-5">Meine letzten Projekte</div>
 	</div>
 
-	<HorizontalCard
+	<MoroseumCard
 		id="1"
 		title="Moroseum"
 		img="/moroseum/1.png"
@@ -20,56 +24,30 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 		imgCount="6"
 	/>
 	<div class="divider my-0"></div>
-	<HorizontalCard
+	<NextTodoCard
 		id="2"
 		title="Next Todo"
-		img="/moroseum/1.png"
+		img="/next_todo/1.png"
 		desc="Einfache Next.js Todo-App mit Datenbankanbindung."
 		url="https://github.com/Marcel267/next_todo"
 		tags={["Next.js", "Prisma", "MySQL"]}
 	/>
 	<div class="divider my-0"></div>
-	<HorizontalCard
+	<!-- <SymfonyCard
 		id="3"
 		title="Symfony Marketing-Website"
 		img="/moroseum/1.png"
 		desc="Multi-Page Marketing-Website, gebaut mit Symfony und Flowbite."
 		url="https://github.com/Marcel267/symfony_marketing"
 		tags={["Symfony", "TailwindCSS", "Flowbite"]}
-	/>
-	<div class="divider my-0"></div>
-	<HorizontalCard
+	/> -->
+	<!-- <div class="divider my-0"></div> -->
+	<FriendCard
 		id="4"
 		title="Freunde-Kartei"
-		img="/moroseum/1.png"
+		img="/kartei/1.png"
 		desc="Schulprojekt: CRUD-Webandwendung, um Freunde und ihre Adressen zu verwalten."
 		url="https://github.com/Marcel267/kartei"
 		tags={["PHP", "TailwindCSS", "Flowbite"]}
 	/>
-
-	<!-- <div>
-        <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
-    </div>
-
-    <HorizontalCard
-        title="Demo Project 3"
-        img="/moroseum/1.png"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        url="#"
-        badge="FOSS"
-    />
-    <div class="divider my-0"></div>
-    <HorizontalCard
-        title="Demo Project 4"
-        img="/moroseum/1.png"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        url="#"
-    />
-    <div class="divider my-0"></div>
-    <HorizontalCard
-        title="Demo Project 5"
-        img="/moroseum/1.png"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        url="#"
-    /> -->
 </BaseLayout>
