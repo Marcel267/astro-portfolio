@@ -25,12 +25,12 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
 	<div class="time-line-container grid gap-4 mb-10">
 		<TimeLineElement
-			title="Weiterführende Schule"
-			subtitle="2010 - 2019 an der Adolf-Reichwein-Schule, 61267 Neu-Anspach"
-		/>
-		<TimeLineElement
 			title="Fachabitur mit Schwerpunkt Informationstechnik"
 			subtitle="2019 - 2021 an der Hochtaunusschule, 61440 Oberursel"
+		/>
+		<TimeLineElement
+			title="Mittlere Reife"
+			subtitle="2010 - 2019 an der Adolf-Reichwein-Schule, 61267 Neu-Anspach"
 		/>
 	</div>
 
@@ -40,16 +40,23 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
 	<div class="time-line-container grid gap-4 mb-10">
 		<TimeLineElement
-			title="Kommissionierer & Lagerist"
-			subtitle="Juni 2018 - Juli 2021, mr!trade GmbH, 61273 Wehrheim"
+			title="Ausbildung Fachinformatiker/Anwendungsentwickung"
+			subtitle="Mai 2022 - Juli 2024, Online Marketing Solutions AG, Niederurseler Allee 8-10, 65760 Eschborn"
 		>
-			Aushilfe im Lager
+			<ul class="list-disc ml-4">
+				<li>
+					Entwicklung verschiedener firmeninterner Full
+					Stack-Web-Apps, um firmeninterne Prozesse und
+					Arbeitsvorgänge zu vereinfachen/erleichtern.
+				</li>
+				<li>Wordpress- und Shopware-Plugin-Entwicklung.</li>
+			</ul>
 		</TimeLineElement>
 		<TimeLineElement
 			title="Ausbildung Fachinformatiker/Systemintegration"
 			subtitle="August 2021 - April 2022, Oberland Group GmbH, 61267 Neu-Anspach"
 		>
-			<ul>
+			<ul class="list-disc ml-4">
 				<li>
 					Aufsetzen und Einrichtung von Kassensystemen und Software.
 				</li>
@@ -57,16 +64,11 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 			</ul>
 		</TimeLineElement>
 		<TimeLineElement
-			title="Ausbildung Fachinformatiker/Anwendungsentwickung"
-			subtitle="Mai 2022 - Juli 2024, Online Marketing Solutions AG, Niederurseler Allee 8-10, 65760 Eschborn"
+			title="Kommissionierer & Lagerist"
+			subtitle="Juni 2018 - Juli 2021, mr!trade GmbH, 61273 Wehrheim"
 		>
-			<ul>
-				<li>
-					Entwicklung verschiedener firmeninterner Fullstack-Webapps,
-					um firmeninterne Prozesse und Arbeitsvorgänge zu
-					vereinfachen/erleichtern.
-				</li>
-				<li>Wordpress- und Shopware-Plugin-Entwicklung.</li>
+			<ul class="list-disc ml-4">
+				<li>Aushilfe im Lager</li>
 			</ul>
 		</TimeLineElement>
 	</div>
@@ -134,14 +136,15 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 		<div class="text-3xl w-full font-bold">Technologien</div>
 	</div>
 
-	<ul class="list-disc md:columns-4 columns-2 mx-6">
+	<ul class="md:columns-5 columns-2 mx-6">
 		<li>PHP</li>
 		<li>Symfony</li>
 		<li>MySQL</li>
-		<li>JS && TS</li>
+		<li>JS & TS</li>
 		<li>React</li>
 		<li>Next.js</li>
 		<li>TailwindCSS</li>
 		<li>Bootstrap</li>
+		<li>Git & Gitlab</li>
 	</ul>
 </BaseLayout>
