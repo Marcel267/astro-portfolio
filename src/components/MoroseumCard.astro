@@ -1,5 +1,14 @@
 ---
-const { title, img, desc, badge, tags, target = "_blank", id } = Astro.props;
+const {
+	title,
+	img,
+	desc,
+	badge,
+	tags,
+	target = "_blank",
+	id,
+	url,
+} = Astro.props;
 import { Image } from "astro:assets";
 ---
 
@@ -169,7 +178,7 @@ import { Image } from "astro:assets";
 			<form method="dialog">
 				<button class="btn text-lg">Schließen</button>
 				<a
-					href="https://github.com/Marcel267/museum"
+					href={url}
 					target="_blank"
 					class="btn btn-outline ml-5 text-lg"
 				>
